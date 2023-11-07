@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+
+/* ↓ FROM Dynamic Sidebar HTML/CSS Workshop ↓ */
+
+:root {
+  --sidebar-width: 60px;
+}
+
+.main-menu {
+  background-color: #212121;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: var(--sidebar-width);
+  overflow: hidden;
+  z-index: 1000;
+  transition: width 0.5s;
+}
+
+.main-menu:hover, .main-menu li {
+  width: 250px;
+}
+
+.fa {
+  width: 60px;
+  height: 36px;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 12px;
+}
+
+.main-menu a {
+  display: flex;
+  align-items: center;
+  color: #999;
+  font-family: arial;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.main-menu a:hover {
+  background-color: lightblue;
+  color: black;
+}
+
+.logout a:hover {
+  color: red;
+}
+
+.main-menu .logout {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+}
+
+ul {
+  margin-top: 10px;
+  /* We should add this */
+  padding-left: 0;
+}
+
+main {
+  margin-left: var(--sidebar-width);
+  padding: 0 10px;
+}
+/* ↑ FROM Dynamic Sidebar HTML/CSS Workshop ↑ */
+
+.avatar {
+  width: 35px; 
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img {
+  aspect-ratio: 5/4; 
+  object-fit: contain;
+}
+
+/* ↓ For react-simple-toasts package ↓ */
+.toast-success {
+  background-color: green;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.toast-error {
+  background-color: red;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 3px;
+}
+/* ↑ For react-simple-toasts package ↑ */
+
+.card i {
+  cursor: pointer;
+}
